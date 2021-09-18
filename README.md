@@ -3,11 +3,11 @@
 This is a collection of older scripts in a C like language called LSL.
 
 This language's compiler has almost no optimizations, so even constant folding must be done by hand. This unfortunately
-includes a lack of inlining of any kind, which meant that for performance most functions needed to be "large"
-The resulting bytecode from the compiler plus the run time data must be less than 64kB, meaning that memory as well as
-execution time are very limited resources.
+includes a lack of inlining of any kind, which meant that for performance most functions needed to be "large".
+The resulting bytecode from the compiler plus the run time data must be less than 64kB, and the underlying system runs
+code at about 150,000 instructions/second effective rate, so both space and time are critical resources.
 
-This language has a small standard library which does not include any cryptographic protocols, and there are no existing
+This language has a small standard library which does not include any cryptographic protocols or functions, and there are no existing
 implementations for most cryptographic standards due to the difficulty of implementing computationally intensive tasks
 into the limited memory and time budgets available to scripts in this VM.
 
